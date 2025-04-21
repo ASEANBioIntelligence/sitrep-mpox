@@ -70,7 +70,7 @@ library(rnaturalearth)
 world <- ne_countries(scale = "medium", returnclass = "sf")
 
 # Read the data
-global_mpox_only <- readxl::read_excel("~/Library/CloudStorage/OneDrive-Personal/GitHub/codes_for_reports/mpox_situation_report_files/distribution mpox variants.xlsx", 
+global_mpox_only <- readxl::read_excel("distribution mpox variants.xlsx", 
                                        sheet = 4, col_names = TRUE)
 
 # Join the mpox data with the world map data
@@ -493,7 +493,7 @@ A total of [**`r asean_formatted_case_num` confirmed cases including `r asean_de
 ```{r}
 
 # Read the data
-asean_mpox_only <- readxl::read_excel("~/OneDrive/GitHub/codes_for_reports/MMWR/files/distribution mpox variants.xlsx", 
+asean_mpox_only <- readxl::read_excel("distribution mpox variants.xlsx", 
                                       sheet = 3, col_names = TRUE)
 
 # Define colors for the map
@@ -591,7 +591,7 @@ ap
 #| title: Distribution of mpox cases in ASEAN Region 2023-2025
 
 # Read the data
-aseanMpox <- readxl::read_excel("~/OneDrive/GitHub/codes_for_reports/MMWR/files/computation_covid_19_mpox.xlsx", 
+aseanMpox <- readxl::read_excel("computation_covid_19_mpox.xlsx", 
                                        sheet = "Mpox", skip= 10, col_names = TRUE)
 
 aseanMpox <- aseanMpox %>% mutate(`Cumulative Cases` = (as.integer(`cases 2023-2024-2025`)),
